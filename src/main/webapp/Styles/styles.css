@@ -1,0 +1,1181 @@
+/* Ajustes generales para el body y el html */
+body, html {
+    margin: 0; /* Eliminar margen */
+    padding: 0; /* Eliminar padding */
+    width: 100%; /* Establecer ancho al 100% */
+    height: 100%; /* Establecer altura al 100% */
+}
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+  }
+  
+  .logo h1 {
+    font-size: 1.5em;
+    color: #1E334E;
+    margin-bottom: 5px;
+  }
+  
+  .logo h2 {
+    font-size: 1em;
+    color: #1E334E;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-menu li {
+    text-transform: uppercase;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #1F2937;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .nav-menu a.active,
+  .nav-menu a:hover {
+    background-color: #1F2937;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .user-btn {
+    background-color: #1E334E;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .menu-toggle {
+    display: none;
+    background-color: #1E334E;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav-menu li {
+      margin: 10px 0;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-menu.show {
+      display: flex;
+    }
+  }
+  
+
+/* Menú de usuario */
+.user-menu {
+    position: relative; /* Posición relativa para el dropdown */
+    display: inline-block; /* Elemento en línea */
+}
+
+.user-btn {
+    background-color: #1E334E; /* Color del botón de usuario */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Padding interior */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1em; /* Tamaño de fuente */
+}
+
+.dropdown-content {
+    display: none; /* Ocultar por defecto */
+    position: absolute; /* Posición absoluta */
+    background-color: #f9f9f9; /* Color de fondo */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra */
+    z-index: 1; /* Niveles de apilamiento */
+    right: 0; /* Alineado a la derecha */
+}
+
+.dropdown-content a {
+    font-size: 1.25em; /* Tamaño de fuente */
+    color: black; /* Color de texto */
+    padding: 12px 16px; /* Padding interior */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Mostrar como bloque */
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1; /* Fondo al pasar el cursor */
+}
+
+.user-menu:hover .dropdown-content {
+    display: block; /* Mostrar dropdown al pasar el cursor */
+}
+
+.fixed-header {
+    position: fixed; /* Fija el header en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: 0; /* Posición en la parte superior */
+    z-index: 1000; /* Asegura que se mantenga por encima de otros elementos */
+    background-color: #ffffff; /* Fondo blanco para que sea visible */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
+}
+
+
+.custom-hr {
+    border: 0;
+    height: 3px; /* Grosor de la línea */
+    background: #1F2937; /* Usando el color principal */
+    width: 90%; /* Ancho del 80% */
+    margin: 20px auto; /* Centrando horizontalmente */
+}
+
+
+/* Section Backgraund */
+.hero {
+    position: relative; /* Posición relativa */
+    background-image: url('../Img/fondoIndex.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubrir todo el fondo */
+    background-position: center; /* Centrar imagen de fondo */
+    height: 100vh; /* Altura de la ventana */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    color: white; /* Color de texto */
+    text-align: center; /* Alinear texto al centro */
+    width: 100%; /* Ancho del 100% */
+    overflow-x: hidden; /* Ocultar desplazamiento horizontal */
+    overflow-y: hidden; /* Ocultar desplazamiento vertical */
+}
+
+.overlay {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Arriba */
+    left: 0; /* Izquierda */
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección en columna */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    padding: 60px 20px; /* Padding interior */
+    margin-top: 10px; /* Margen superior negativo */
+}
+
+.overlay h1 {
+    font-size: 3em; /* Tamaño de fuente */
+    margin: 0; /* Sin margen */
+}
+
+.overlay p {
+    font-size: 1.5em; /* Tamaño de fuente */
+    margin: 10px 0 0; /* Margen superior */
+}
+
+.cta-btn {
+    background-color: white; /* Fondo del botón */
+    color: #333; /* Color del texto */
+    padding: 10px 20px; /* Padding interior */
+    text-decoration: none; /* Sin subrayado */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-top: 40px; /* Espacio superior del botón */
+    font-size: 1.25em; /* Tamaño de fuente */
+    border: 2px solid #1E334E; /* Borde del botón */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transición */
+}
+
+.cta-btn:hover {
+    background-color: #1E334E; /* Fondo al pasar el cursor */
+    color: white; /* Color del texto al pasar el cursor */
+}
+
+/* Sección de Servicios */
+.services {
+    padding: 60px 20px; /* Padding interior */
+    background-color: #f9f9f9; /* Color de fondo */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.services h2 {
+    font-size: 3em; /* Tamaño de fuente */
+    margin-bottom: 40px; /* Margen inferior */
+    color: #1E334E; /* Color del texto */
+}
+
+.flex-container {
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+}
+
+.left-side,
+.right-side {
+    width: 48%; /* Ancho del 48% */
+    padding: 20px; /* Padding interior */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho */
+}
+
+.left-side {
+    background-color: #f9f9f9; /* Fondo */
+}
+
+.right-side {
+    background-color: #ffffff; /* Fondo */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección en columna */
+    align-items: center; /* Centrar elementos horizontalmente */
+    justify-content: center; /* Centrar elementos verticalmente */
+}
+
+/* Carousel */
+.carousel-container {
+    position: relative; /* Posición relativa */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    width: 100%; /* Ancho del 100% */
+}
+
+.carousel {
+    overflow: hidden; /* Ocultar contenido desbordado */
+    width: 100%; /* Ancho del 100% */
+}
+
+.carousel-track {
+    display: flex; /* Usar flexbox */
+    transition: transform 0.5s ease; /* Transición */
+}
+
+.carousel-item {
+    flex: none; /* No flex-grow */
+    width: 100%; /* Ancho del 100% */
+    background-color: white; /* Fondo */
+    padding: 20px; /* Padding interior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.carousel-button {
+    background-color: #1E334E; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Padding interior */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    font-size: 2em; /* Tamaño de fuente */
+    border-radius: 50%; /* Bordes redondeados */
+    margin: 0 10px; /* Margen */
+    transition: background-color 0.3s ease; /* Transición */
+}
+
+.carousel-button:hover {
+    background-color: #555; /* Fondo al pasar el cursor */
+}
+
+/* Sección de Proyectos Destacados */
+.featured-projects {
+    padding: 60px 20px; /* Padding interior */
+    background-color: #f9f9f9; /* Color de fondo */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.featured-projects h2 {
+    font-size: 3em; /* Tamaño de fuente */
+    margin-bottom: 40px; /* Margen inferior */
+    color: #1E334E; /* Color del texto */
+}
+
+.carousel-container {
+    position: relative; /* Posición relativa */
+    display: flex; /* Usar flexbox */
+    align-items: center; /* Centrar elementos verticalmente */
+    justify-content: center; /* Centrar elementos horizontalmente */
+    width: 100%; /* Ancho del 100% */
+}
+
+.carousel {
+    overflow: hidden; /* Ocultar contenido desbordado */
+    width: 100%; /* Ancho del 100% */
+}
+
+.carousel-track {
+    display: flex; /* Usar flexbox */
+    transition: transform 0.5s ease; /* Transición */
+}
+
+.project-item {
+    flex: none; /* No flex-grow */
+    width: calc(33.33% - 40px); /* Mostrar 3 elementos a la vez con margen */
+    margin: 0 20px; /* Margen */
+    background-color: white; /* Fondo */
+    padding: 20px; /* Padding interior */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.carousel-button {
+    background-color: #1E334E; /* Fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px; /* Padding interior */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    font-size: 2em; /* Tamaño de fuente */
+    border-radius: 50%; /* Bordes redondeados */
+    margin: 0 10px; /* Margen */
+    transition: background-color 0.3s ease; /* Transición */
+}
+
+.carousel-button:hover {
+    background-color: #555; /* Fondo al pasar el cursor */
+}
+
+/* Footer */
+.footer {
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 40px 20px; /* Padding interior */
+}
+
+.footer .container {
+    display: flex; /* Usar flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-between; /* Espacio entre elementos */
+}
+
+.footer-content {
+    display: flex; /* Usar flexbox */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-between; /* Espacio entre elementos */
+    width: 100%; /* Ancho del 100% */
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+.footer-section {
+    flex: 1; /* Flex-grow para ocupar todo el espacio disponible */
+    min-width: 250px; /* Ancho mínimo */
+    margin: 10px; /* Margen */
+}
+
+.footer-section h3 {
+    font-size: 2em; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.footer-section p, .footer-section ul, .footer-section li {
+    font-size: 1.25em; /* Tamaño de fuente */
+}
+
+.footer-section ul {
+    list-style: none; /* Quitar viñetas */
+    padding: 0; /* Sin padding */
+}
+
+.footer-section ul li {
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.footer-section ul li a {
+    color: white; /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición */
+}
+
+.footer-section ul li a:hover {
+    color: #f9f9f9; /* Color de texto al pasar el cursor */
+}
+
+.footer-bottom {
+    text-align: center; /* Alinear texto al centro */
+    font-size: 1em; /* Tamaño de fuente */
+    margin-top: 20px; /* Margen superior */
+    width: 100%; /* Ancho del 100% */
+}
+
+.footer-bottom p {
+    margin: 0; /* Sin margen */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Disponer elementos en columna */
+        text-align: center; /* Alinear texto al centro */
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Disponer elementos en columna */
+    }
+
+    .nav-menu li {
+        margin: 10px 0; /* Margen vertical */
+    }
+
+    .flex-container {
+        flex-direction: column; /* Disponer elementos en columna */
+    }
+
+    .left-side, .right-side {
+        width: 100%; /* Ancho del 100% */
+        margin-bottom: 20px; /* Margen inferior */
+    }
+
+    .carousel-track {
+        display: block; /* Mostrar como bloque */
+    }
+
+    .carousel-item {
+        width: calc(100% - 40px); /* Mostrar 1 elemento a la vez con margen */
+    }
+
+    .project-item {
+        width: calc(100% - 40px); /* Mostrar 1 elemento a la vez con margen */
+    }
+
+    .footer .container {
+        flex-direction: column; /* Disponer elementos en columna */
+        text-align: center; /* Alinear texto al centro */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Disponer elementos en columna */
+        align-items: center; /* Centrar elementos horizontalmente */
+    }
+
+    .footer-section {
+        max-width: 400px; /* Ancho máximo */
+    }
+
+    .footer-bottom {
+        margin-top: 20px; /* Margen superior */
+    }
+}
+
+/* Main */
+main {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Fondo suave para todo el main */
+}
+
+/* Sección Nosotros */
+.about {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    color: #1E334E; /* Usar color principal */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #1E334E; /* Línea inferior */
+    display: inline-block;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; /* Espacio entre cuadros */
+    flex-wrap: wrap; /* Permitir que los cuadros se envuelvan en pantallas pequeñas */
+}
+
+.about-box {
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    padding: 20px;
+    width: 45%; /* Ancho del 45% */
+    border: 1px solid #E2E8F0; /* Borde suave */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Collapsible button */
+.collapsible {
+    background-color: #1E334E; /* Usar color principal */
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.collapsible:after {
+    content: '\002B'; /* Plus sign */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212"; /* Minus sign */
+}
+
+/* Collapsible content */
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.content p {
+    font-size: 1.1em;
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Sección Misión y Visión */
+.mission-vision {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px; /* Espacio entre columnas */
+}
+
+.mission, .vision {
+    background-color: #ffffff; /* Fondo blanco para contraste */
+    padding: 20px;
+    width: 45%;
+    border: 1px solid #E2E8F0; /* Borde suave */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.mission h4, .vision h4 {
+    font-size: 1.5em;
+    color: #2D3748;
+    margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+    font-size: 1em;
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Sección de valores */
+.valores {
+    background-color: #1F2937; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 40px 20px; /* Padding interior */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.valores h2 {
+    font-size: 2.5em; /* Tamaño de fuente */
+    margin-bottom: 30px; /* Margen inferior */
+    margin-top: 10px;
+    color: #ffffff; /* Color del texto */
+}
+
+.valores .descripcion {
+    font-size: 1.1em; /* Tamaño de fuente */
+    margin-bottom: 40px; /* Margen inferior */
+    color: #ffffff; /* Color del texto */
+}
+
+.valores-container {
+    display: grid; /* Usar grid */
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre elementos */
+    justify-content: center; /* Centrar contenido */
+    align-items: center; /* Centrar contenido */
+}
+
+.valor-item {
+    background-color: white; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar desbordamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.valor-header {
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px; /* Padding interior */
+    font-size: 16px; /* Tamaño de fuente */
+    display: flex; /* Usar flexbox */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centrar elementos */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    border: none; /* Sin borde */
+    font-weight: bold; /* Negrita */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.valor-header:hover {
+    background-color: #ffffff; /* Color de fondo al pasar el cursor */
+    color: #1E334E; /* Color del texto al pasar el cursor */
+}
+
+.icono {
+    font-size: 20px; /* Tamaño de fuente */
+    color: white; /* Color del icono */
+}
+
+.valor-content {
+    padding: 0 18px; /* Padding interior */
+    display: none; /* Ocultar por defecto */
+    overflow: hidden; /* Ocultar desbordamiento */
+    background-color: #f1f1f1; /* Color de fondo */
+    border-radius: 0 0 10px 10px; /* Bordes redondeados solo abajo */
+}
+
+.valor-content p {
+    font-size: 20px; /* Tamaño de fuente */
+    color: #4A5568; /* Color del texto */
+    line-height: 1.6; /* Altura de línea */
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .valores-container {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
+
+
+/* Sección de Equipo */
+
+
+.equipo {
+    background-color: #ffffff; /* Color de fondo */
+    padding: 40px 20px; /* Padding interior */
+    text-align: center; /* Alinear texto al centro */
+}
+
+.equipo h2 {
+    font-size: 2.5em; /* Tamaño de fuente */
+    margin-bottom: 30px; /* Margen inferior */
+    color: #1E334E; /* Color del texto */
+    font-weight: bold; /* Negrita */
+}
+
+.equipo-container {
+    display: grid; /* Usar grid */
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 20px; /* Espacio entre elementos */
+    justify-content: center; /* Centrar contenido */
+    align-items: center; /* Centrar contenido */
+}
+
+.equipo-item {
+    position: relative; /* Posición relativa */
+    overflow: hidden; /* Ocultar desbordamiento */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease; /* Transición */
+}
+
+.equipo-item img {
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    object-fit: cover; /* Cubrir el espacio del contenedor */
+    display: block; /* Mostrar como bloque */
+    transition: transform 0.3s ease; /* Transición */
+}
+
+.equipo-item .overlay {
+    position: absolute; /* Posición absoluta */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: white; /* Color del texto */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    opacity: 0; /* Ocultar por defecto */
+    transition: opacity 0.3s ease; /* Transición */
+    font-size: 1.1em; /* Tamaño de fuente */
+    text-align: center; /* Alinear texto al centro */
+    padding: 1px; /* Padding interior */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.equipo-item:hover .overlay {
+    opacity: 1; /* Mostrar al pasar el cursor */
+}
+
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .equipo-container {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .equipo-container {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
+
+
+/* Proyectos */
+.title-section {
+    margin-top: 100px;
+    background-color: #1E334E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.filter-section {
+    margin: 50px 0; /* Margen superior e inferior */
+    text-align: center; /* Centrar contenido */
+}
+
+.project-filters {
+    display: inline-block; /* Mostrar en línea */
+}
+
+/* Botones de filtro */
+.filter-btn {
+    padding: 10px 20px; /* Padding interior */
+    margin: 0 10px; /* Margen lateral */
+    font-size: 1em; /* Tamaño de fuente */
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.filter-btn:hover {
+    background-color: #ffffff; /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra al pasar el cursor */
+}
+
+.filter-btn.active {
+    background-color: #ffffff; /* Color de fondo para el botón activo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para el botón activo */
+    color: #1E334E;
+}
+
+.filter-btn.inactive {
+    background-color: #B0BEC5; /* Color de fondo para los botones inactivos */
+    color: #ECEFF1; /* Color del texto para los botones inactivos */
+}
+
+.project-list {
+    display: grid; /* Usar grid en lugar de flexbox */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre elementos */
+    justify-content: center; /* Centrar contenido */
+    margin-bottom: 60px; /* Margen inferior para separar de la paginación */
+    margin-top:-30px; /* Margen inferior para separar de la paginación */
+    justify-items: center; /* Centrar cada item individualmente */
+}
+
+.project-card {
+    position: relative; /* Posición relativa */
+    background-color: white; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    overflow: hidden; /* Ocultar desbordamiento */
+    width: 300px; /* Ancho fijo */
+    text-align: center; /* Alinear texto al centro */
+    transition: transform 0.3s ease; /* Transición suave */
+    margin-bottom: 40px;
+}
+
+.project-card img {
+    width: 100%; /* Ancho del 100% */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Cubrir el espacio del contenedor */
+    display: block; /* Mostrar como bloque */
+}
+
+.project-overlay {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: white; /* Color del texto */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección en columna */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    opacity: 0; /* Ocultar por defecto */
+    transition: opacity 0.3s ease; /* Transición */
+    padding: 10px; /* Padding interior */
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1; /* Mostrar al pasar el cursor */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Zoom ligero en hover */
+}
+
+/* Contenedor de la paginación */
+.pagination {
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: center; /* Centrar contenido */
+    margin-top: 20px; /* Margen superior */
+}
+
+.pagination .page-btn {
+    padding: 10px 15px; /* Padding interior */
+    margin: 0 5px; /* Margen lateral */
+    font-size: 1em; /* Tamaño de fuente */
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.pagination .page-btn:hover {
+    background-color: #4A5568; /* Color de fondo al pasar el cursor */
+}
+
+.pagination .page-btn.active {
+    background-color: #4A5568; /* Color de fondo para la página activa */
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .project-list {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-list {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
+
+/*  Servicios */
+
+.services-filter-section {
+    margin: 50px 0; /* Margen superior e inferior */
+    text-align: center; /* Centrar contenido */
+}
+
+.services-filters {
+    display: inline-block; /* Mostrar en línea */
+}
+
+.services-filter-btn {
+    padding: 10px 20px; /* Padding interior */
+    margin: 0 10px; /* Margen lateral */
+    font-size: 1em; /* Tamaño de fuente */
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.services-filter-btn:hover {
+    background-color: #ffffff; /* Color de fondo al pasar el cursor */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra al pasar el cursor */
+    
+}
+
+.services-filter-btn.active {
+    background-color: #ffffff; /* Color de fondo para el botón activo */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para el botón activo */
+    color: #1E334E;
+}
+
+/* Lista de servicios */
+.services-list {
+    display: grid; /* Usar grid en lugar de flexbox */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px; /* Espacio entre elementos */
+    justify-content: center; /* Centrar contenido */
+    margin-bottom: 40px; /* Margen inferior para separar de la paginación */
+    justify-items: center; /* Centrar cada item individualmente */
+}
+
+.services-card {
+    position: relative; /* Posición relativa */
+    background-color: white; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    overflow: hidden; /* Ocultar desbordamiento */
+    width: 300px; /* Ancho fijo */
+    text-align: center; /* Alinear texto al centro */
+    transition: transform 0.3s ease; /* Transición suave */
+    margin-bottom: 40px;
+}
+
+.services-card img {
+    width: 100%; /* Ancho del 100% */
+    height: 300px; /* Altura fija */
+    object-fit: cover; /* Cubrir el espacio del contenedor */
+    display: block; /* Mostrar como bloque */
+}
+
+.services-overlay {
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Posición en la parte superior */
+    left: 0; /* Posición en la parte izquierda */
+    width: 100%; /* Ancho del 100% */
+    height: 100%; /* Altura del 100% */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    color: white; /* Color del texto */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Dirección en columna */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Centrar contenido verticalmente */
+    opacity: 0; /* Ocultar por defecto */
+    transition: opacity 0.3s ease; /* Transición */
+    padding: 10px; /* Padding interior */
+}
+
+.services-card:hover .services-overlay {
+    opacity: 1; /* Mostrar al pasar el cursor */
+}
+
+.services-card:hover {
+    transform: scale(1.05); /* Zoom ligero en hover */
+}
+
+/* Contenedor de la paginación */
+.services-pagination {
+    display: flex; /* Usar flexbox para la disposición */
+    justify-content: center; /* Centrar contenido */
+    margin-top: 20px; /* Margen superior */
+}
+
+.services-pagination .page-btn {
+    padding: 10px 15px; /* Padding interior */
+    margin: 0 5px; /* Margen lateral */
+    font-size: 1em; /* Tamaño de fuente */
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.services-pagination .page-btn:hover {
+    background-color: #4A5568; /* Color de fondo al pasar el cursor */
+}
+
+.services-pagination .page-btn.active {
+    background-color: #4A5568; /* Color de fondo para la página activa */
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .services-list {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-list {
+        grid-template-columns: 1fr; /* Una columna */
+    }
+}
+
+.contact-form-container {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form-container h2 {
+    text-align: center;
+    color: #1E334E;
+  }
+  
+  .contact-form-container p {
+    text-align: center;
+    color: #666;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  legend {
+    padding: 0 10px;
+    color: #333;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .form-group {
+    flex: 1;
+    min-width: 45%;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input,
+  select,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #1E334E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #1E334E;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .form-group {
+      min-width: 100%;
+    }
+    
+    .contact-form-container {
+      width: 90%;
+    }
+  }
+  
+/* Footer */
+
+footer {
+    background-color: #1E334E;
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  .footer-container {
+    width: 100%;
+    max-width: 1200px; /* Limita el ancho máximo */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-info, .contact-info, .footer-menu, .social-icons {
+    margin: 10px;
+    flex: 1 1 200px; /* Flexibilidad para adaptarse */
+  }
+  
+  .footer-info p, .contact-info p, .footer-menu ul li a {
+    margin: 5px 0;
+  }
+  
+  .social-icons a img {
+    width: 20px;
+    margin: 0 10px;
+  }
+  
+  .footer-menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footer-menu ul li {
+    margin: 5px;
+  }
+  
+  .footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-menu ul li a:hover {
+    color: #f9f9f9;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-info, .contact-info, .social-icons, .footer-menu {
+      text-align: center;
+    }
+  }
+  
