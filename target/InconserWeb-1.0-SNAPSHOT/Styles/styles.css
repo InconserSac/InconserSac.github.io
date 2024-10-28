@@ -29,7 +29,7 @@ body, html {
   .nav-menu {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 15px;   
   }
   
   .nav-menu li {
@@ -342,10 +342,15 @@ body, html {
     border: none; /* Sin borde */
     padding: 10px; /* Padding interior */
     cursor: pointer; /* Cambiar cursor al pasar por encima */
-    font-size: 2em; /* Tamaño de fuente */
+    font-size: 1.5em; /* Ajustar el tamaño de fuente */
     border-radius: 50%; /* Bordes redondeados */
     margin: 0 10px; /* Margen */
     transition: background-color 0.3s ease; /* Transición */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    display: flex; /* Centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
 }
 
 .carousel-button:hover {
@@ -589,6 +594,7 @@ main {
     color: white; /* Color del texto */
     padding: 40px 20px; /* Padding interior */
     text-align: center; /* Alinear texto al centro */
+    height: auto; /*Ajusta automaticamente el fondo*/
 }
 
 .valores h2 {
@@ -605,20 +611,25 @@ main {
 }
 
 .valores-container {
-    display: grid; /* Usar grid */
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 20px; /* Espacio entre elementos */
-    justify-content: center; /* Centrar contenido */
-    align-items: center; /* Centrar contenido */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Distribución en columnas */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px; /* Espacio interno alrededor del contenedor */
 }
 
 .valor-item {
-    background-color: white; /* Color de fondo */
+    background-color: #1E334E; /* Color de fondo */
+    color: white; /* Texto en blanco */
     border-radius: 10px; /* Bordes redondeados */
     overflow: hidden; /* Ocultar desbordamiento */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 15px; /* Espacio interno */
+    text-align: center; /* Centrar texto */
+    cursor: pointer; /* Cambiar cursor en hover */
+    overflow: hidden; /* Ocultar desbordamiento */
+    transition: all 0.3s ease; /* Transición suave */
 }
-
+    
 .valor-header {
     background-color: #1E334E; /* Color de fondo */
     color: white; /* Color del texto */
@@ -631,6 +642,7 @@ main {
     border: none; /* Sin borde */
     font-weight: bold; /* Negrita */
     border-radius: 10px; /* Bordes redondeados */
+    width: 100%; /*tamaño del boton*/
 }
 
 .valor-header:hover {
@@ -641,6 +653,7 @@ main {
 .icono {
     font-size: 20px; /* Tamaño de fuente */
     color: white; /* Color del icono */
+    margin-left: auto; /* Esto empuja el ícono hacia la derecha */
 }
 
 .valor-content {
